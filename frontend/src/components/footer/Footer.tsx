@@ -118,7 +118,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-4 text-center text-xs">
+        <div className="border-t mt-8 pt-4 text-center text-sm">
           <p>&copy; {currentYear} Attwear. All rights reserved.</p>
         </div>
       </div>
