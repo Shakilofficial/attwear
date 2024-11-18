@@ -5,10 +5,10 @@ import { Button } from "../ui/button";
 
 const slides = [
   {
-    title: "Fresh Arrivals Online",
-    description: "Discover Our Newest Collection Today.",
+    title: "New Galaxy Smart Watch 5",
+    description: "Explore some Trendy new collection of Smart Watch Here",
     imageUrl:
-      "https://res.cloudinary.com/dcyupktj6/image/upload/v1727351439/samples/ecommerce/shoes.png",
+      "https://res.cloudinary.com/dcyupktj6/image/upload/v1731944319/wh73cuvhcmoidi7k4dkz.png",
     buttonText: "View Collection",
     link: "/collections/new-arrivals",
     gradient: "bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500",
@@ -17,26 +17,26 @@ const slides = [
     title: "Exclusive Footwear Sale",
     description: "Step into comfort and style with our premium footwear.",
     imageUrl:
-      "https://res.cloudinary.com/dcyupktj6/image/upload/v1728807649/ibcqkxogzow48zo4pdfc.webp",
+      "https://res.cloudinary.com/dcyupktj6/image/upload/v1727351439/samples/ecommerce/shoes.png",
     buttonText: "Shop Footwear",
     link: "/collections/footwear",
     gradient: "bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500",
   },
   {
-    title: "Top Gadgets 2024",
-    description: "Discover cutting-edge tech gadgets for your daily needs.",
+    title: "Woden Materials Chair Collection",
+    description: "Elevate your style with our premium chairs.",
     imageUrl:
       "https://res.cloudinary.com/dcyupktj6/image/upload/v1727351447/samples/chair.png",
-    buttonText: "Explore Gadgets",
+    buttonText: "Show More",
     link: "/collections/gadgets",
     gradient: "bg-gradient-to-r from-green-400 via-teal-500 to-blue-500",
   },
   {
-    title: "Accessories for Every Occasion",
-    description: "Find the perfect finishing touch for any outfit.",
+    title: "Trending Laptops Collection",
+    description: "Stay ahead of the curve with our latest laptop collection.",
     imageUrl:
-      "https://res.cloudinary.com/dcyupktj6/image/upload/v1727351438/samples/food/dessert.jpg",
-    buttonText: "View Accessories",
+      "https://res.cloudinary.com/dcyupktj6/image/upload/v1731944390/uxgda7qet19c0zsy9hei.png",
+    buttonText: "View Collection",
     link: "/collections/accessories",
     gradient: "bg-gradient-to-r from-orange-400 via-pink-500 to-red-500",
   },
@@ -99,14 +99,14 @@ export default function CarouselSlider() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.5 }}
-              className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-2xl"
+              className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden"
             >
               <img
                 src={slides[currentSlide].imageUrl}
                 alt={slides[currentSlide].title}
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bg-transparent" />
             </motion.div>
           </AnimatePresence>
         </div>
@@ -118,7 +118,7 @@ export default function CarouselSlider() {
         onClick={prevSlide}
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-5 w-5" />
+        <ChevronLeft className="h-4 w-4" />
       </Button>
       <Button
         variant="outline"
@@ -127,7 +127,7 @@ export default function CarouselSlider() {
         onClick={nextSlide}
         aria-label="Next slide"
       >
-        <ChevronRight className="h-5 w-5" />
+        <ChevronRight className="h-4 w-4" />
       </Button>
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
         {slides.map((_, index) => (
