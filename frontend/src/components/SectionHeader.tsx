@@ -1,7 +1,7 @@
 type SectionHeaderProps = {
   title: string;
   subtitle?: string;
-  alignment?: "left" | "center" | "right"; // Optional alignment prop
+  alignment?: "left" | "center" | "right";
 };
 
 export default function SectionHeader({
@@ -19,8 +19,7 @@ export default function SectionHeader({
           : "text-center"
       }`}
     >
-      {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-gray-100">
+      <h2 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-rose-300 via-pink-600 to-rose-500 text-transparent bg-clip-text">
         {title}
       </h2>
 
