@@ -1,12 +1,22 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import DashboardLayout from "./layouts/DashboardLayout";
+import MainLayout from "./layouts/MainLayout";
+import DashboardHomePage from "./pages/Dashboard/DashboardHomePage";
+import HomePage from "./pages/Main/HomePage";
 
-import { Button } from "./components/ui/button";
-
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <Button>Click me</Button>
-    </>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<HomePage />} />
+        </Route>
+        <Route path="/dashboard" element={<DashboardLayout />}>
+          <Route index element={<DashboardHomePage />} />
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
