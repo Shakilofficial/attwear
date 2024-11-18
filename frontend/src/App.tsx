@@ -3,6 +3,10 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import MainLayout from "./layouts/MainLayout";
 import DashboardHomePage from "./pages/Dashboard/DashboardHomePage";
 import HomePage from "./pages/Main/HomePage";
+import AuthLayout from "./layouts/AuthLayout";
+
+import Register from "./pages/Auth/Register";
+import Login from "./pages/Auth/Login";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +17,10 @@ const App: React.FC = () => {
         </Route>
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<DashboardHomePage />} />
+        </Route>
+        <Route path="/auth" element={<AuthLayout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </Router>

@@ -13,25 +13,25 @@ export default function NavLinks({ isMobile }: { isMobile?: boolean }) {
         to="/"
         className="text-sm font-medium hover:text-rose-600 transition-colors"
       >
-        Home
+        HOME
       </Link>
       <Link
         to="/categories"
         className="text-sm font-medium hover:text-rose-600 transition-colors"
       >
-        Categories
+        CATEGORIES
       </Link>
       <Link
         to="/about"
         className="text-sm font-medium hover:text-rose-600 transition-colors"
       >
-        About
+        ABOUT
       </Link>
       <Link
         to="/contact"
         className="text-sm font-medium hover:text-rose-600 transition-colors"
       >
-        Contact
+        CONTACT
       </Link>
     </nav>
   );

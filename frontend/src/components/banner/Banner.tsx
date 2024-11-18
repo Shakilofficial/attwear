@@ -36,7 +36,7 @@ const slides = [
     description: "Stay ahead of the curve with our latest laptop collection.",
     imageUrl:
       "https://res.cloudinary.com/dcyupktj6/image/upload/v1731944390/uxgda7qet19c0zsy9hei.png",
-    buttonText: "View Collection",
+    buttonText: "View Collections",
     link: "/collections/accessories",
     gradient: "bg-gradient-to-r from-orange-400 via-pink-500 to-red-500",
   },
