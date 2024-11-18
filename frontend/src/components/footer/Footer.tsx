@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 md:mt-14">
             <h3 className="font-semibold text-sm">SUPPORT</h3>
             <ul className="space-y-2">
               <li>
@@ -64,7 +64,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-4 md:mt-14">
             <h3 className="font-semibold text-sm">COMPANY</h3>
             <ul className="space-y-2">
               <li>
@@ -94,7 +94,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="md:mt-14">
             <h3 className="font-semibold text-sm mb-4">ACCEPTED PAYMENTS</h3>
             <div className="flex gap-2">
               <div className="w-12 h-8 border rounded flex justify-center items-center">
