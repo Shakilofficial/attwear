@@ -1,6 +1,8 @@
-import SectionHeader from "../SectionHeader";
+import { useState } from "react";
+import TabNavigation from "./TabNavigation";
 import ProductCard from "./ProductCard";
 
+// Sample Product Data
 const defaultProducts = [
   {
     name: "Men's Formal Shirt",
@@ -9,6 +11,8 @@ const defaultProducts = [
     stock: 10,
     image:
       "https://res.cloudinary.com/dcyupktj6/image/upload/v1731944390/uxgda7qet19c0zsy9hei.png",
+    featured: true, // Added featured property for filtering
+    tags: ["Shirt", "Men", "Formal"],
   },
   {
     name: "Leather Wallet",
@@ -17,6 +21,8 @@ const defaultProducts = [
     stock: 5,
     image:
       "https://res.cloudinary.com/dcyupktj6/image/upload/v1727351447/samples/chair.png",
+    featured: false,
+    tags: ["Accessories", "Wallet"],
   },
   {
     name: "Running Shoes",
@@ -25,6 +31,8 @@ const defaultProducts = [
     stock: 0,
     image:
       "https://res.cloudinary.com/dcyupktj6/image/upload/v1727351439/samples/ecommerce/shoes.png",
+    featured: false,
+    tags: ["Shoes", "Running"],
   },
   {
     name: "Polo T-Shirt",
@@ -33,25 +41,29 @@ const defaultProducts = [
     stock: 8,
     image:
       "https://res.cloudinary.com/dcyupktj6/image/upload/v1731944319/wh73cuvhcmoidi7k4dkz.png",
+    featured: true,
+    tags: ["T-Shirt", "Men", "Casual"],
   },
 ];
 
-export default function ProductGrid({ products = defaultProducts }) {
-  return (
-    <section className="px-6 py-10">
-      {/* Section Title */}
-      <SectionHeader
-        title="Best Sewing Products"
-        subtitle="Explore popular products from our selection."
-        alignment="center"
-      />
+const ProductsView = () => {
+  const [activeTab, setActiveTab] = useState(1); // 1: Featured, 2: Latest
+  const [products, setProducts] = useState(defaultProducts); // Setting up the products array
 
-      {/* Product Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {products.map((product) => (
+  // Filter products based on activeTab
+  const filteredProducts =
+    activeTab === 1 ? products.filter((product) => product.featured) : products;
+
+  return (
+    <div className="p-8">
+      <TabNavigation setTab={setActiveTab} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+        {filteredProducts.map((product) => (
           <ProductCard key={product.name} product={product} />
         ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default ProductsView;

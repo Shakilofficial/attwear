@@ -1,6 +1,7 @@
 import Banner from "@/components/banner/Banner";
 import FeaturesList from "@/components/features/FeaturesList";
 import ProductGrid from "@/components/product/ProductGrid";
+import ProductsView from "@/components/product/ProductsView";
 
 const HomePage = () => {
   return (
@@ -8,7 +9,7 @@ const HomePage = () => {
       <Banner />
       <FeaturesList />
       <ProductGrid />
-
+      <ProductsView />
       <h1>This is Home</h1>
     </div>
   );

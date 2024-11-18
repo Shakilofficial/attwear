@@ -19,7 +19,7 @@ export default function SectionHeader({
           : "text-center"
       }`}
     >
-      <h2 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-rose-300 via-pink-600 to-rose-500 text-transparent bg-clip-text">
+      <h2 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-pink-300 via-rose-500 to-purple-300 text-transparent bg-clip-text">
         {title}
       </h2>
 
