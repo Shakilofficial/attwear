@@ -16,7 +16,7 @@ export default function SearchBar({ isMobile }: { isMobile?: boolean }) {
         type="search"
       />
       <Search
-        className={`absolute left-2 top-2.5 h-4 w-4 text-muted-foreground ${
+        className={`absolute left-2 top-2.5 h-3 w-4 text-muted-foreground ${
           isMobile ? "hidden" : "block"
         }`}
       />
